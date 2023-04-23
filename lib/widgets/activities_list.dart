@@ -44,10 +44,11 @@ class ListActivities extends StatelessWidget {
                           activity.title ?? '',
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
+                            fontSize: 14,
                           ),
                         ),
                         subtitle: Text(
-                          'Hora: ${activity.time ?? ''}',
+                          activity.time ?? '',
                         ),
                         trailing: const Icon(Icons.arrow_forward_ios_outlined),
                       ),

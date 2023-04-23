@@ -4,9 +4,9 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class ActivitiesProvider with ChangeNotifier {
-  List<Datum> _activities = [];
+  List<Data> _activities = [];
 
-  List<Datum> get activities => _activities;
+  List<Data> get activities => _activities;
 
   Future<void> fetchActivities() async {
     final url =

@@ -10,12 +10,12 @@ class Activities {
     this.data,
   });
 
-  final List<Datum>? data;
+  final List<Data>? data;
 
   factory Activities.fromJson(Map<String, dynamic> json) => Activities(
         data: json["data"] == null
             ? []
-            : List<Datum>.from(json["data"]!.map((x) => Datum.fromJson(x))),
+            : List<Data>.from(json["data"]!.map((x) => Data.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -25,8 +25,8 @@ class Activities {
       };
 }
 
-class Datum {
-  Datum({
+class Data {
+  Data({
     this.id,
     this.title,
     this.time,
@@ -38,7 +38,7 @@ class Datum {
   final String? time;
   final String? date;
 
-  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+  factory Data.fromJson(Map<String, dynamic> json) => Data(
         id: json["_id"],
         title: json["title"],
         time: json["time"],
