@@ -5,6 +5,8 @@ class Date extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color yellow = const Color(0xFFFFAC30);
+
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
       child: Column(
@@ -55,7 +57,7 @@ class Date extends StatelessWidget {
                   margin: const EdgeInsets.only(right: 16.0),
                   width: 42.0,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: yellow,
                     borderRadius: BorderRadius.circular(12.0),
                     boxShadow: [
                       BoxShadow(

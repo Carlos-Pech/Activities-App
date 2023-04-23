@@ -11,7 +11,7 @@ class UserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color myColor = const Color(0xFF0247E1);
+    Color blue = const Color(0xFF0247E1);
     return Scaffold(
       backgroundColor: Colors.grey[200],
       body: ListView(
@@ -22,7 +22,7 @@ class UserScreen extends StatelessWidget {
           UserActivitiesList(),
         ],
       ),
-      bottomNavigationBar: SignOff(myColor: myColor),
+      bottomNavigationBar: SignOff(myColor: blue),
     );
   }
 }
