@@ -30,29 +30,33 @@ class UserActivitiesList extends StatelessWidget {
                 const SizedBox(height: 10.0),
                 Column(
                   children: activitiesProvider.activities.map((activity) {
-                    return Card(
-                      elevation: 5.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: ListTile(
-                        leading: SvgPicture.asset(
-                          'assets/images/Do it.svg',
-                          width: 40.0,
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: Card(
+                        elevation: 5.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
-                        title: Text(
-                          activity.title ?? '',
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
+                        child: ListTile(
+                          leading: SvgPicture.asset(
+                            'assets/images/Do it.svg',
+                            width: 60.0,
                           ),
-                        ),
-                        subtitle: Text(
-                          'Hora: ${activity.time ?? ''}',
+                          title: Text(
+                            activity.title ?? '',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          ),
+                          subtitle: Text(
+                            activity.time ?? '',
+                          ),
                         ),
                       ),
                     );
                   }).toList(),
-                ),
+                )
               ],
             ),
           );

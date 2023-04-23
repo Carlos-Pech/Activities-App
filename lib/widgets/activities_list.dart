@@ -30,27 +30,31 @@ class ListActivities extends StatelessWidget {
                 const SizedBox(height: 10.0),
                 Column(
                   children: activitiesProvider.activities.map((activity) {
-                    return Card(
-                      elevation: 5.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: ListTile(
-                        leading: SvgPicture.asset(
-                          'assets/images/Do it.svg',
-                          width: 60.0,
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: Card(
+                        elevation: 5.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
-                        title: Text(
-                          activity.title ?? '',
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
+                        child: ListTile(
+                          leading: SvgPicture.asset(
+                            'assets/images/Do it.svg',
+                            width: 60.0,
                           ),
+                          title: Text(
+                            activity.title ?? '',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          ),
+                          subtitle: Text(
+                            activity.time ?? '',
+                          ),
+                          trailing:
+                              const Icon(Icons.arrow_forward_ios_outlined),
                         ),
-                        subtitle: Text(
-                          activity.time ?? '',
-                        ),
-                        trailing: const Icon(Icons.arrow_forward_ios_outlined),
                       ),
                     );
                   }).toList(),
